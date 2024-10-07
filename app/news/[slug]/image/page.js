@@ -1,4 +1,5 @@
 import {DUMMY_NEWS} from '@/dummy-news';
+import {notFound} from 'next/navigation';
 
 export default function ImagePage({params}) {
   const newItemSlug = params.slug;
