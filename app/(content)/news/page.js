@@ -1,14 +1,8 @@
 import NewsList from '@/components/news-list';
+import {getAllNews} from '@/lib/news';
 
 export default async function NewsPage() {
-  const res = await fetch('http://localhost:8080/news');
-
-  if (!res.ok) {
-    throw new Error(`Failed to fetch news: ${res.status}`);
-  }
-
-  const news = await res.json();
-
+  const news = getAllNews();
   return (
     <>
       <h1>NewsPage</h1>
